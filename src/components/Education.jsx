@@ -24,6 +24,20 @@ const education = [
       '50% TAR UMT Merit Scholarship + 50% Hong Leong Foundation Scholarship',
     ],
   },
+  {
+    month: 'MAR',
+    year: '2022',
+    title: 'Sijil Pelajaran Malaysia (SPM)',
+    org: 'Chung Ling High School, Penang',
+    period: 'Jan 2017 – Nov 2021 · Computer Science Stream',
+    points: [
+      '4A+, 3A, 1A-, 2B+',
+      'A+: Bahasa Melayu, Bahasa Inggeris, Sejarah, Matematik',
+      'A: Matematik Tambahan, Fizik, Kimia · A-: Sains Komputer · B+: Pendidikan Moral & Bahasa Cina',
+      'Secretary of I-CreatorZ · Vice Treasurer of Chess Club · Treasurer of School Broadcast Unit',
+      'Assistant Secretary of Civil Defence Cadet Corps (APM) · Class Monitor',
+    ],
+  },
 ]
 
 export default function Education() {

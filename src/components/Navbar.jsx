@@ -11,9 +11,11 @@ export default function Navbar() {
         <nav>
           <a href="#about">About</a>
           <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#involvements">Involvements</a>
           <a href="#awards">Awards</a>
           <a href="#contact">Contact</a>
           <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-resume">Resume</a>

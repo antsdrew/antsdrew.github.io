@@ -11,7 +11,6 @@ export default function Contact() {
         <div className="contact-links">
           <a href="mailto:andrewwwpqj@gmail.com">Email</a>
           <a href="https://linkedin.com/in/andrewphengqijinn" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com/antsdrew" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
     </section>

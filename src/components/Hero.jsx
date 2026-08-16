@@ -1,12 +1,11 @@
-import { GithubIcon, LinkedinIcon, MailIcon, ArrowIcon } from './Icons.jsx'
+import { LinkedinIcon, MailIcon, ArrowIcon } from './Icons.jsx'
 import Typewriter from './Typewriter.jsx'
 import andrewPhoto from '../assets/images/andrewphoto.jpg'
 
 const roles = [
   'Software Engineer',
-  'AI & Computer Vision',
-  'Embedded Systems',
-  'Accessibility Tech',
+  'AI & Machine Learning',
+  'Full-Stack Developer',
 ]
 
 export default function Hero() {
@@ -21,16 +20,19 @@ export default function Hero() {
           </p>
 
           <div className="social-row">
-            <a href="https://github.com/antsdrew" target="_blank" rel="noreferrer" aria-label="GitHub"><GithubIcon /></a>
             <a href="https://linkedin.com/in/andrewphengqijinn" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a>
             <a href="mailto:andrewwwpqj@gmail.com" aria-label="Email"><MailIcon /></a>
           </div>
 
           <p className="lead">
-            I build AI-integrated systems that hold up outside a notebook — from computer
-            vision running on embedded hardware to a wearable assistive device for visually
-            impaired users that's won national recognition.
+            Software Engineering graduate with a CGPA of 3.93. My final year project is VISION,
+            a wearable assistive device for visually impaired users.
           </p>
+
+          <div className="status-tag">
+            <span className="pulse" />
+            Looking for Software Engineering & AI Engineer roles
+          </div>
 
           <div className="actions">
             <a href="#projects" className="btn btn-primary">

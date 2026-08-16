@@ -3,14 +3,9 @@ import SectionHead from './SectionHead.jsx'
 
 const awards = [
   'Best Technology Award — TAR UMT EETPIX 2026 (FYP Exhibition Day)',
-  'Finalist — 2026 GISU Urban Innovation & Entrepreneurship Competition, Guangzhou, China',
+  'Finalist — 2026 GISU Urban Innovation & Entrepreneurship Competition, Guangzhou, China (upcoming, Oct 2026)',
   '1st Runner-Up — Campus Tech X Challenge 2025 (StartupPenang500@University)',
   'Second Runner-Up — Jabil Early Career Programs Bootcamp 2.0, 2025',
-  'MVP presented at Startup Venture Vibes Summit 2025',
-  "President's List — Bachelor's (CGPA 3.93) and Diploma (CGPA 3.99)",
-  '100% Scholarship (Bachelor\'s) · 50% TAR UMT Merit + 50% Hong Leong Foundation (Diploma)',
-  'Soft Skills Competency Gold Award — TAR UMT',
-  'MUET Band 5.0',
 ]
 
 export default function Awards() {

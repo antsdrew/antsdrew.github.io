@@ -6,13 +6,14 @@ import Footer from '../components/Footer.jsx'
 export default function ProjectDetail() {
   const { id } = useParams()
   const project = projects.find((p) => p.id === id)
+  const unavailable = !project || !project.hasDetailPage || !project.detailPageEnabled
 
-  if (!project) {
+  if (unavailable) {
     return (
       <>
         <Navbar />
         <div className="container detail-page">
-          <p>Project not found.</p>
+          <p>This project page isn't available yet.</p>
           <Link to="/" className="back-link">← Back home</Link>
         </div>
         <Footer />

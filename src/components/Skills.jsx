@@ -12,11 +12,11 @@ const groups = [
   },
   {
     label: 'Databases & Cloud',
-    items: ['Oracle SQL', 'Firebase Firestore', 'Firebase Storage', 'Firebase Cloud Messaging'],
+    items: ['Oracle SQL', 'PL/SQL', 'Firebase Firestore', 'Firebase Storage', 'Firebase Cloud Messaging'],
   },
   {
     label: 'Tools & Platforms',
-    items: ['Linux', 'Git', 'Raspberry Pi', 'Automated Testing', 'Cisco Networking', 'Microsoft Project'],
+    items: ['Linux', 'Git', 'Raspberry Pi', 'Automated Testing', 'Cisco Networking', 'Agile/Scrum', 'Jira', 'Microsoft Project'],
   },
 ]
 

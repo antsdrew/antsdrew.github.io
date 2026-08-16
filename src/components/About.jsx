@@ -10,17 +10,18 @@ export default function About() {
           <Reveal delay={80}>
             <div className="about-text">
               <p>
-                I'm a Software Engineering graduate based in Penang, Malaysia, with a habit of
-                building things that need to work in the real world — not just in a notebook.
-                My final year project, VISION, is a pair of AI-powered smart glasses for visually
-                impaired users that went from a class assignment to winning Best Technology Award
-                and getting selected as a finalist at an international innovation competition.
+                I'm a Software Engineering graduate based in Penang, Malaysia. My final year
+                project, VISION, is a pair of AI-powered smart glasses for visually impaired
+                users. It won Best Technology Award at TAR UMT EETPIX 2026 and was selected as a
+                finalist at the GISU Urban Innovation Competition in Guangzhou, China, taking
+                place October 2026.
               </p>
               <p>
-                I've spent internships debugging power hardware on an oscilloscope and building
-                production-grade WPF applications for PCB manufacturing — I like the parts of
-                engineering where software has to answer to physical reality.
+                I've also completed internships in hardware testing and software development,
+                including power supply validation on an oscilloscope and building a WPF
+                application for PCB manufacturing.
               </p>
+              <p className="hobby-note">♟️ Hobby: usually losing at chess.</p>
             </div>
           </Reveal>
           <Reveal delay={160}>
