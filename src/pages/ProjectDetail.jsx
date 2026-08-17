@@ -21,6 +21,8 @@ export default function ProjectDetail() {
     )
   }
 
+  const hasGroups = project.screenshotGroups && project.screenshotGroups.length > 0
+
   return (
     <>
       <Navbar />
@@ -31,13 +33,31 @@ export default function ProjectDetail() {
         <p className="subtitle">{project.subtitle}</p>
         <p className="period">{project.period}</p>
 
-        <div className="thumb" style={{ marginBottom: 40, aspectRatio: '16/7' }}>
-          DEMO SCREENSHOT / VIDEO PLACEHOLDER
-        </div>
+        {hasGroups ? (
+          <div className="screenshot-groups">
+            {project.screenshotGroups.map((group) => (
+              <div className="screenshot-group" key={group.title}>
+                <h3 className="screenshot-group-title">{group.title}</h3>
+                <div className={`screenshot-${group.layout}`}>
+                  {group.items.map((s) => (
+                    <figure className="screenshot-item" key={s.src}>
+                      <img src={s.src} alt={s.caption} loading="lazy" />
+                      <figcaption>{s.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="thumb" style={{ marginBottom: 40, aspectRatio: '16/7' }}>
+            DEMO SCREENSHOT / VIDEO PLACEHOLDER
+          </div>
+        )}
 
         <div className="detail-section">
           <h2>Overview</h2>
-          <p style={{ color: 'var(--text-muted)' }}>{project.description}</p>
+          <p style={{ color: 'var(--muted)' }}>{project.description}</p>
         </div>
 
         {project.features.length > 0 && (

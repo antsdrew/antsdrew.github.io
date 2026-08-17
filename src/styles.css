@@ -436,14 +436,8 @@ img {
 }
 
 /* ---------- About ---------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 40px;
-}
-
 .about-text {
-  max-width: 640px;
+  max-width: 680px;
 }
 
 .about-text p {
@@ -454,46 +448,6 @@ img {
 .hobby-note {
   font-size: 0.82rem;
   opacity: 0.7;
-}
-
-.edu-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 16px 18px;
-  margin-bottom: 12px;
-}
-
-.edu-card .degree {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.94rem;
-  margin: 0 0 3px;
-}
-
-.edu-card .meta {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-}
-
-.edu-more {
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--deep);
-  border-bottom: 1px solid var(--border);
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.edu-more:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-@media (max-width: 800px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ---------- Projects ---------- */
@@ -649,6 +603,12 @@ img {
   padding: 2px 8px;
   border-radius: 999px;
   margin: 0 5px 5px 0;
+}
+
+.show-more-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
 }
 
 /* ---------- Skills ---------- */
@@ -1103,4 +1063,63 @@ img {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--muted);
+}
+
+.screenshot-groups {
+  margin-bottom: 40px;
+}
+
+.screenshot-group {
+  margin-bottom: 32px;
+}
+
+.screenshot-group-title {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.screenshot-item {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.screenshot-item img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+.screenshot-item figcaption {
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-family: var(--font-body);
+}
+
+.screenshot-hero {
+  display: block;
+}
+
+.screenshot-hero .screenshot-item {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.screenshot-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }

@@ -8,11 +8,11 @@ const groups = [
   },
   {
     label: 'Frameworks & Libraries',
-    items: ['Flutter', 'YOLOv8', 'OpenCV', 'TensorFlow/Keras', 'scikit-learn', 'PyTorch', 'Hugging Face', 'Bootstrap', 'WPF/XAML'],
+    items: ['Flutter', 'YOLOv8', 'OpenCV', 'TensorFlow/Keras', 'scikit-learn', 'PyTorch', 'Hugging Face', 'XGBoost', 'Streamlit', 'Flask', 'Servlets', 'JPA', 'Bootstrap', 'WPF/XAML'],
   },
   {
     label: 'Databases & Cloud',
-    items: ['Oracle SQL', 'PL/SQL', 'Firebase Firestore', 'Firebase Storage', 'Firebase Cloud Messaging'],
+    items: ['Oracle SQL', 'PL/SQL', 'SQLite', 'Firebase Auth', 'Firebase Firestore', 'Firebase Storage', 'Firebase Cloud Messaging'],
   },
   {
     label: 'Tools & Platforms',

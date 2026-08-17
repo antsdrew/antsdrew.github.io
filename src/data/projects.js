@@ -3,6 +3,24 @@
 // without deleting any of the URLs stored below.
 export const SHOW_REPO_LINKS = false
 
+import mizukiMainForest from '../assets/images/mizuki/main-forest.png'
+import mizukiBiomeDesert from '../assets/images/mizuki/biome-desert.png'
+import mizukiBiomeFrozen from '../assets/images/mizuki/biome-frozen.png'
+import mizukiDailyCheckin from '../assets/images/mizuki/daily-checkin.png'
+import mizukiDailyTasksV2 from '../assets/images/mizuki/daily-tasks-v2.png'
+import mizukiFocusRules from '../assets/images/mizuki/focus-rules.png'
+import mizukiFocusTimerSelect from '../assets/images/mizuki/focus-timer-select.png'
+import mizukiFocusRunning from '../assets/images/mizuki/focus-running.png'
+import mizukiFocusTimerRunning from '../assets/images/mizuki/focus-timer-running.png'
+import mizukiFocusEndedEarly from '../assets/images/mizuki/focus-ended-early.png'
+import mizukiFocusMinimized from '../assets/images/mizuki/focus-minimized.png'
+import mizukiShopItems from '../assets/images/mizuki/shop-items.png'
+import mizukiShopTreeboxes from '../assets/images/mizuki/shop-treeboxes.png'
+import mizukiShopBiomes from '../assets/images/mizuki/shop-biomes.png'
+import mizukiPlanting from '../assets/images/mizuki/planting.png'
+import mizukiPlotSettings from '../assets/images/mizuki/plot-settings.png'
+import mizukiInventoryTrees from '../assets/images/mizuki/inventory-trees.png'
+
 const projects = [
   {
     id: 'vision',
@@ -11,7 +29,7 @@ const projects = [
     period: 'Jun 2025 — Nov 2025 · Final Year Project',
     icon: '👓',
     description:
-      'AI-powered smart glasses paired with a Flutter companion app, built to give visually impaired users real-time awareness of their surroundings — object detection, obstacle alerts, navigation, face recognition, and document scanning, hands-free in three languages.',
+      'AI-powered smart glasses paired with a Flutter companion app, built to give visually impaired users real-time awareness of their surroundings: object detection, obstacle alerts, navigation, face recognition, and document scanning, hands-free in three languages.',
     tech: ['Python', 'YOLOv8', 'OpenCV', 'Raspberry Pi 5', 'Dart/Flutter', 'Firebase', 'Vosk', 'OpenAI Vision API', 'Google Maps API'],
     features: [
       'Custom YOLOv8 model trained on COCO, EgoObjects & Cityscapes — 195 unified classes',
@@ -36,18 +54,20 @@ const projects = [
   },
   {
     id: 'cyberbullying-detection',
+    main: true,
     title: 'Multilingual Cyberbullying Detection',
-    subtitle: 'NLP text classification across English, Malay & Manglish',
+    subtitle: 'Two-stage NLP pipeline with an interactive Streamlit app',
     period: 'Jul 2025 — Sep 2025 · AI Coursework',
     icon: '🛡️',
     description:
-      'Trained and benchmarked 8 models — from Naive Bayes to fine-tuned transformers — to classify toxic text at ~196,000 samples, with a recall-first threshold strategy tuned for real-world moderation use.',
-    tech: ['Python', 'TensorFlow/Keras', 'PyTorch', 'scikit-learn', 'Hugging Face', 'XGBoost'],
+      'A cyberbullying detection system for English, Malay, and Manglish text. Seq2seq models normalise informal or code-mixed text before nine classifier variants predict toxicity, all wrapped in an interactive Streamlit app with batch analysis and detection history.',
+    tech: ['Python', 'TensorFlow/Keras', 'PyTorch', 'scikit-learn', 'Hugging Face Transformers', 'XGBoost', 'Streamlit'],
     features: [
-      '8 models compared: CNN, BLSTM+Attention, Logistic Regression, Naive Bayes, XGBoost, BERTweet, BART, T5',
-      'TF-IDF vectorisation + stratified 80/10/10 split',
-      'Recall-first threshold optimisation with full evaluation suite (ROC, F1, MCC, calibration)',
-      'Transformer fine-tuning extended to multilingual & code-mixed (Manglish) text',
+      'Merged multiple public datasets into a combined corpus, with full cleaning, deduplication, tokenisation, and lemmatisation',
+      'Custom Manglish slang dictionary and rule-based normalisation for Malay-English code-mixed text',
+      'Three seq2seq models (BART, T5, BERTweet) normalise informal text before classification',
+      'Nine classifier variants compared: Logistic Regression, Naive Bayes, XGBoost, BLSTM with Attention, and six CNN configurations tuned for different precision/recall trade-offs',
+      'Deployed as an interactive Streamlit app with live detection, batch CSV upload, model comparison dashboard, and detection history',
     ],
     repoUrl: '',
     liveUrl: '',
@@ -58,23 +78,83 @@ const projects = [
   },
   {
     id: 'mizukis-forest',
-    title: "Mizuki's Forest",
-    subtitle: 'Virtual Forest module — mental health & productivity platform',
+    main: true,
+    title: "Mizuki's Forest: Mental Health and Productivity System",
+    subtitle: 'Virtual Forest module — my contribution to a 6-module platform',
     period: 'Feb 2025 — May 2025 · Team of 5, Collaborative Development',
     icon: '🌲',
     description:
-      "Mizuki's Forest is a 6-module mental health platform built by a team of 5. I designed and built the Virtual Forest module — timers that grow a virtual forest, with a full reward economy and anti-exploitation mechanics to keep engagement genuine.",
-    tech: ['JSP', 'Bootstrap', 'HTML', 'CSS', 'JavaScript'],
+      "Mizuki's Forest is a 6-module mental health platform built by a team of 5. I designed and built the Virtual Forest module: a focus-timer system that grows a virtual forest, with a full reward economy, live session tracking, and anti-exploitation mechanics to keep engagement genuine.",
+    tech: ['Java', 'JSP', 'Bootstrap', 'HTML', 'CSS', 'JavaScript'],
     features: [
-      'Timer, stopwatch & Pomodoro focus modes tied to tree-growing rewards',
-      '4-tier rarity reward system with a pity mechanic after 10 fails',
-      'Withered-tree penalty for abandoned sessions to discourage exploitation',
-      'Full in-game economy: coins, XP, levelling, shop, inventory, customisable biomes',
+      'Grid-based planting: pick a tile, then choose a tree or item from your inventory tray to place it',
+      'Two focus modes (Stopwatch and Timer, up to 3 hours); longer sessions unlock a chance at rarer tree box tiers',
+      'Withered-tree penalty for sessions ended early, removable only with a purchasable shovel',
+      'Shop with three sections: tree boxes by rarity (Common to Legendary), cosmetic pets and decor items, and unlockable biomes like Desert and Frozen Islands',
+      'Plot settings to auto-rotate between plots or manually clear one and start over',
+      'Daily tasks, both default and player-created, plus a 7-day login streak and level-up system',
+      "Community feature to search for and visit other users' forests, with a privacy toggle to opt out",
+    ],
+    screenshotGroups: [
+      {
+        title: 'The Forest',
+        layout: 'hero',
+        items: [
+          { src: mizukiMainForest, caption: 'Main forest plot, fully planted with trees, cosmetics, and pets earned from focus sessions' },
+        ],
+      },
+      {
+        title: 'Biomes',
+        layout: 'row',
+        items: [
+          { src: mizukiBiomeDesert, caption: 'Desert biome' },
+          { src: mizukiBiomeFrozen, caption: 'Frozen Islands biome' },
+        ],
+      },
+      {
+        title: 'Daily Engagement',
+        layout: 'row',
+        items: [
+          { src: mizukiDailyCheckin, caption: '7-day login streak with escalating coin rewards' },
+          { src: mizukiDailyTasksV2, caption: 'Daily tasks, including a player-created custom task' },
+        ],
+      },
+      {
+        title: 'Focus Sessions',
+        layout: 'grid',
+        items: [
+          { src: mizukiFocusRules, caption: 'Focus session rules: Stopwatch and Timer modes' },
+          { src: mizukiFocusTimerSelect, caption: 'Timer mode: choosing a duration up to 3 hours' },
+          { src: mizukiFocusRunning, caption: 'Stopwatch mode running, with the current reward updating live' },
+          { src: mizukiFocusTimerRunning, caption: 'Timer mode running, counting down from 3 hours' },
+          { src: mizukiFocusEndedEarly, caption: 'Ending a session early triggers the withered-tree penalty' },
+          { src: mizukiFocusMinimized, caption: 'Session can be minimised to a floating widget while browsing the rest of the app' },
+        ],
+      },
+      {
+        title: 'Shop',
+        layout: 'grid',
+        items: [
+          { src: mizukiShopTreeboxes, caption: 'Tree boxes by rarity, from Common to Legendary' },
+          { src: mizukiShopItems, caption: 'Cosmetic pets and decor items' },
+          { src: mizukiShopBiomes, caption: 'Unlockable biomes' },
+        ],
+      },
+      {
+        title: 'Inventory & Planting',
+        layout: 'row',
+        items: [
+          { src: mizukiInventoryTrees, caption: 'Full collection of trees earned so far' },
+          { src: mizukiPlanting, caption: 'Planting flow: select a tile, then choose an item from the inventory tray' },
+          { src: mizukiPlotSettings, caption: 'Plot settings: auto-rotate plots or clear the current one' },
+        ],
+      },
     ],
     repoUrl: '',
     liveUrl: '',
     awards: [],
-    hasDetailPage: false,
+    hasDetailPage: true,
+    detailPageEnabled: true,
     featured: false,
     image: null,
   },
@@ -106,7 +186,7 @@ const projects = [
     period: 'Image Processing Coursework',
     icon: '🔊',
     description:
-      'A YOLOv8 desktop app that speaks what it sees — object counting, location description, and auto-announce detection. An early prototype of what later became VISION\'s object detection module.',
+      'A YOLOv8 desktop app that speaks what it sees: object counting, location description, and auto-announce detection. An early prototype of what later became VISION\'s object detection module.',
     tech: ['Python', 'YOLOv8', 'OpenCV', 'pyttsx3'],
     features: [
       'Text-to-speech output for detected objects and their location',
@@ -139,6 +219,7 @@ const projects = [
   },
   {
     id: 'library-system-db',
+    main: true,
     title: 'Integrated Online Library System',
     subtitle: 'Full-stack Oracle database system for a multi-branch library network',
     period: 'Advanced Database Coursework',
@@ -178,13 +259,22 @@ const projects = [
   },
   {
     id: 'workshop-management',
-    title: 'Workshop Management App',
-    subtitle: 'Mobile app for car mechanic workshops',
-    period: 'Mobile App Dev Coursework',
+    main: true,
+    title: 'TaskFlow',
+    subtitle: 'Offline-capable job management app for workshop mechanics',
+    period: 'Team of 4, Mobile App Dev Coursework',
     icon: '🔧',
-    description: 'A mobile application to manage workshop operations for car mechanics.',
-    tech: ['Flutter', 'Dart'],
-    features: [],
+    description:
+      'A Flutter mobile app that gives workshop mechanics a live view of assigned jobs, task breakdowns, and vehicle history, with offline support and Firestore sync so nothing is lost without signal.',
+    tech: ['Flutter', 'Dart', 'Firebase Auth', 'Firestore', 'SQLite', 'fl_chart'],
+    features: [
+      'Job dashboard with daily/weekly progress charts and filterable Assigned/Accepted/Completed lists',
+      'Task breakdown per job: individual timers, notes (text and voice), photo capture, and a parts request flow',
+      'Offline-first with a local SQLite store that syncs back to Firestore once reconnected',
+      'Customer sign-off screen with signature capture and service rating',
+      'Vehicle details and full service history pulled per job',
+      'Alerts for parts arrival, new job assignments, and due-date reminders',
+    ],
     repoUrl: '',
     liveUrl: '',
     awards: [],
@@ -210,13 +300,22 @@ const projects = [
   },
   {
     id: 'grading-system',
+    main: true,
     title: 'Online Grading & Examination System',
-    subtitle: 'Built with agile sprints, team of 4',
+    subtitle: 'Full-stack Flask + Firestore exam platform for three roles, built with agile sprints, team of 4',
     period: 'Agile Development Coursework',
     icon: '📝',
-    description: 'A full grading and examination platform delivered through structured sprints and scrum ceremonies.',
-    tech: ['Python', 'Agile/Scrum'],
-    features: [],
+    description:
+      'A full academic examination system with real-time exam-taking (session resume, auto-save, anti-cheat question shuffling), automated and manual grading pipelines, and a resit-exam payment flow, built across three role-based dashboards for Admin, Lecturer, and Student.',
+    tech: ['Python', 'Flask', 'Firebase/Firestore', 'JavaScript', 'HTML', 'CSS', 'Agile/Scrum'],
+    features: [
+      'Real-time exam engine: session resume on disconnect, heartbeat auto-save, per-attempt question and answer shuffling, auto force-submit on timeout',
+      'Auto-grading for objective questions plus a manual grading workflow for essay answers, with per-question feedback and finalisation',
+      'Resit-exam payment system with fee checks, refunds, and payment status tracking',
+      'Past-year papers bank: completed exams convert into practice exams with view/attempt analytics',
+      'Role-based dashboards for Admin, Lecturer, and Student, with lecturer-side results drill-down (programme → tutorial group → student)',
+      '108 automated tests across unit, integration, API, UI, and acceptance layers, run through a multi-stage CI pipeline',
+    ],
     repoUrl: '',
     liveUrl: '',
     awards: [],
@@ -226,8 +325,8 @@ const projects = [
   },
   {
     id: 'c-to-java',
-    title: 'Legacy C → Java Conversion',
-    subtitle: 'Procedural to OOP software maintenance exercise',
+    title: 'Software Maintenance: Legacy C → Java Conversion',
+    subtitle: 'Procedural to OOP conversion coursework',
     period: 'Software Maintenance Coursework',
     icon: '🔄',
     description: 'Converted a diploma-era C assignment into a maintainable, object-oriented Java system.',
@@ -247,7 +346,7 @@ const projects = [
     period: 'Diploma · Computer Systems Architecture Coursework',
     icon: '🥐',
     description:
-      'A full point-of-sale system for a bakery, built directly in x86 8086/8088 Assembly (MASM) — login authentication, member management, product customisation, order billing with SST calculation, and receipt generation, all through direct DOS/BIOS interrupts.',
+      'A full point-of-sale system for a bakery, built directly in x86 8086/8088 Assembly (MASM), covering login authentication, member management, product customisation, order billing with SST calculation, and receipt generation, all through direct DOS/BIOS interrupts.',
     tech: ['x86 Assembly', 'MASM'],
     features: [
       'Login system with character-by-character string comparison in raw assembly',
@@ -314,13 +413,21 @@ const projects = [
   },
   {
     id: 'just-eat-wealthy',
+    main: true,
     title: 'Just Eat Wealthy',
-    subtitle: 'Health and wellness product MLM system',
+    subtitle: 'Full Java EE e-commerce platform with a points-based loyalty system',
     period: 'Diploma · GUI Coursework',
     icon: '🛒',
-    description: 'A multilevel marketing system for health and wellness products, built with a JSP-driven GUI.',
-    tech: ['Java Server Pages (JSP)'],
-    features: [],
+    description:
+      'An e-commerce platform for health and wellness products, built on Java Servlets, JSP, and JPA. Customers earn points on purchases and redeem them for coupons, while admins manage products, staff, and orders through a dashboard with live sales charts.',
+    tech: ['Java', 'JSP', 'Servlets', 'JPA', 'JavaScript', 'HTML', 'CSS'],
+    features: [
+      'Full e-commerce flow: catalogue with categories and search, cart, checkout, and order tracking',
+      'Points-based loyalty program: earn points on purchase, redeem for coupons with min-spend and rebate rules',
+      'Admin dashboard with 4 live charts built from JPA queries — order trends, revenue, top-selling products, and general KPIs',
+      'Full staff and customer management (CRUD) for admins',
+      'Email-verified signup, password reset, and profile picture upload',
+    ],
     repoUrl: '',
     liveUrl: '',
     awards: [],
@@ -338,7 +445,7 @@ const projects = [
     tech: ['HTML', 'JavaScript'],
     features: [],
     repoUrl: 'https://github.com/antsdrew/air-theremin',
-    liveUrl: '',
+    liveUrl: 'https://antsdrew.github.io/air-theremin/',
     awards: [],
     hasDetailPage: false,
     featured: false,
@@ -354,7 +461,7 @@ const projects = [
     tech: ['HTML', 'JavaScript'],
     features: [],
     repoUrl: 'https://github.com/antsdrew/magia-rush',
-    liveUrl: '',
+    liveUrl: 'https://antsdrew.github.io/magia-rush/',
     awards: [],
     hasDetailPage: false,
     featured: false,
