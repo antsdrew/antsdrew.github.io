@@ -38,7 +38,7 @@ export default function Hero() {
             <a href="#projects" className="btn btn-primary">
               View Projects <ArrowIcon />
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-secondary">Resume</a>
+            {/* Temporarily hidden: <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-secondary">Resume</a> */}
           </div>
         </div>
 

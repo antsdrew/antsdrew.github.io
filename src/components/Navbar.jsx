@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link to="/#involvements">Involvements</Link>
           <Link to="/#awards">Awards</Link>
           <Link to="/#contact">Contact</Link>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-resume">Resume</a>
+          {/* Temporarily hidden: <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-resume">Resume</a> */}
         </nav>
       </div>
     </header>
